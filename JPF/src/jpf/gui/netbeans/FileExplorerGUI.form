@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JDialog" name="jDialogFont">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btnOK" min="-2" pref="72" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jSliderFontSize" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="cboFont" min="-2" pref="147" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cboFont" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSliderFontSize" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Font:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cboFont">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="212">
+                <StringItem index="0" value="academy engraved let"/>
+                <StringItem index="1" value="algerian"/>
+                <StringItem index="2" value="amaze"/>
+                <StringItem index="3" value="arial"/>
+                <StringItem index="4" value="arial black"/>
+                <StringItem index="5" value="balthazar"/>
+                <StringItem index="6" value="bankgothic lt bt"/>
+                <StringItem index="7" value="bart"/>
+                <StringItem index="8" value="bimini"/>
+                <StringItem index="9" value="comic sans ms"/>
+                <StringItem index="10" value="book antiqua"/>
+                <StringItem index="11" value="bookman old style"/>
+                <StringItem index="12" value="braggadocio"/>
+                <StringItem index="13" value="britannic bold"/>
+                <StringItem index="14" value="brush script mt"/>
+                <StringItem index="15" value="century gothic"/>
+                <StringItem index="16" value="century schoolbook"/>
+                <StringItem index="17" value="chasm"/>
+                <StringItem index="18" value="chicago"/>
+                <StringItem index="19" value="colonna mt"/>
+                <StringItem index="20" value="comic sans ms"/>
+                <StringItem index="21" value="commercialscript bt"/>
+                <StringItem index="22" value="coolsville"/>
+                <StringItem index="23" value="courier"/>
+                <StringItem index="24" value="courier new"/>
+                <StringItem index="25" value="cursive"/>
+                <StringItem index="26" value="dayton"/>
+                <StringItem index="27" value="desdemona"/>
+                <StringItem index="28" value="fantasy"/>
+                <StringItem index="29" value="flat brush"/>
+                <StringItem index="30" value="footlight mt light"/>
+                <StringItem index="31" value="futurablack bt"/>
+                <StringItem index="32" value="futuralight bt"/>
+                <StringItem index="33" value="garamond"/>
+                <StringItem index="34" value="gaze"/>
+                <StringItem index="35" value="geneva"/>
+                <StringItem index="36" value="georgia"/>
+                <StringItem index="37" value="geotype tt"/>
+                <StringItem index="38" value="helterskelter"/>
+                <StringItem index="39" value="helvetica"/>
+                <StringItem index="40" value="herman"/>
+                <StringItem index="41" value="highlight let"/>
+                <StringItem index="42" value="impact"/>
+                <StringItem index="43" value="jester"/>
+                <StringItem index="44" value="joan"/>
+                <StringItem index="45" value="john handy let"/>
+                <StringItem index="46" value="jokerman let"/>
+                <StringItem index="47" value="kelt"/>
+                <StringItem index="48" value="kids"/>
+                <StringItem index="49" value="kino mt"/>
+                <StringItem index="50" value="la bamba let"/>
+                <StringItem index="51" value="lithograph"/>
+                <StringItem index="52" value="lucida console"/>
+                <StringItem index="53" value="map symbols"/>
+                <StringItem index="54" value="marlett"/>
+                <StringItem index="55" value="matteroffact"/>
+                <StringItem index="56" value="matisse itc"/>
+                <StringItem index="57" value="matura mt script capitals"/>
+                <StringItem index="58" value="mekanik let"/>
+                <StringItem index="59" value="monaco"/>
+                <StringItem index="60" value="monospace"/>
+                <StringItem index="61" value="monotype sorts"/>
+                <StringItem index="62" value="ms linedraw"/>
+                <StringItem index="63" value="new york"/>
+                <StringItem index="64" value="olddreadfulno7 bt"/>
+                <StringItem index="65" value="orange let"/>
+                <StringItem index="66" value="palatino"/>
+                <StringItem index="67" value="playbill"/>
+                <StringItem index="68" value="pump demi bold let"/>
+                <StringItem index="69" value="puppylike"/>
+                <StringItem index="70" value="roland"/>
+                <StringItem index="71" value="sans-serif"/>
+                <StringItem index="72" value="scripts"/>
+                <StringItem index="73" value="scruff let"/>
+                <StringItem index="74" value="serif"/>
+                <StringItem index="75" value="short hand"/>
+                <StringItem index="76" value="signs normal"/>
+                <StringItem index="77" value="simplex"/>
+                <StringItem index="78" value="simpson"/>
+                <StringItem index="79" value="stylus bt"/>
+                <StringItem index="80" value="superfrench"/>
+                <StringItem index="81" value="surfer"/>
+                <StringItem index="82" value="swis721 bt"/>
+                <StringItem index="83" value="swis721 blkoul bt"/>
+                <StringItem index="84" value="symap"/>
+                <StringItem index="85" value="symbol"/>
+                <StringItem index="86" value="tahoma"/>
+                <StringItem index="87" value="technic"/>
+                <StringItem index="88" value="tempus sans itc"/>
+                <StringItem index="89" value="terk"/>
+                <StringItem index="90" value="times"/>
+                <StringItem index="91" value="times new roman"/>
+                <StringItem index="92" value="trebuchet ms"/>
+                <StringItem index="93" value="trendy"/>
+                <StringItem index="94" value="txt"/>
+                <StringItem index="95" value="verdana"/>
+                <StringItem index="96" value="victorian let"/>
+                <StringItem index="97" value="vineta bt"/>
+                <StringItem index="98" value="vivian"/>
+                <StringItem index="99" value="webdings"/>
+                <StringItem index="100" value="wingdings"/>
+                <StringItem index="101" value="western"/>
+                <StringItem index="102" value="westminster"/>
+                <StringItem index="103" value="westwood let"/>
+                <StringItem index="104" value="wide latin"/>
+                <StringItem index="105" value="zapfellipt bt"/>
+                <StringItem index="106" value="ACADEMY ENGRAVED LET"/>
+                <StringItem index="107" value="ALGERIAN"/>
+                <StringItem index="108" value="AMAZE"/>
+                <StringItem index="109" value="ARIAL"/>
+                <StringItem index="110" value="ARIAL BLACK"/>
+                <StringItem index="111" value="BALTHAZAR"/>
+                <StringItem index="112" value="BANKGOTHIC LT BT"/>
+                <StringItem index="113" value="BART"/>
+                <StringItem index="114" value="BIMINI"/>
+                <StringItem index="115" value="COMIC SANS MS"/>
+                <StringItem index="116" value="BOOK ANTIQUA"/>
+                <StringItem index="117" value="BOOKMAN OLD STYLE"/>
+                <StringItem index="118" value="BRAGGADOCIO"/>
+                <StringItem index="119" value="BRITANNIC BOLD"/>
+                <StringItem index="120" value="BRUSH SCRIPT MT"/>
+                <StringItem index="121" value="CENTURY GOTHIC"/>
+                <StringItem index="122" value="CENTURY SCHOOLBOOK"/>
+                <StringItem index="123" value="CHASM"/>
+                <StringItem index="124" value="CHICAGO"/>
+                <StringItem index="125" value="COLONNA MT"/>
+                <StringItem index="126" value="COMIC SANS MS"/>
+                <StringItem index="127" value="COMMERCIALSCRIPT BT"/>
+                <StringItem index="128" value="COOLSVILLE"/>
+                <StringItem index="129" value="COURIER"/>
+                <StringItem index="130" value="COURIER NEW"/>
+                <StringItem index="131" value="CURSIVE"/>
+                <StringItem index="132" value="DAYTON"/>
+                <StringItem index="133" value="DESDEMONA"/>
+                <StringItem index="134" value="FANTASY"/>
+                <StringItem index="135" value="FLAT BRUSH"/>
+                <StringItem index="136" value="FOOTLIGHT MT LIGHT"/>
+                <StringItem index="137" value="FUTURABLACK BT"/>
+                <StringItem index="138" value="FUTURALIGHT BT"/>
+                <StringItem index="139" value="GARAMOND"/>
+                <StringItem index="140" value="GAZE"/>
+                <StringItem index="141" value="GENEVA"/>
+                <StringItem index="142" value="GEORGIA"/>
+                <StringItem index="143" value="GEOTYPE TT"/>
+                <StringItem index="144" value="HELTERSKELTER"/>
+                <StringItem index="145" value="HELVETICA"/>
+                <StringItem index="146" value="HERMAN"/>
+                <StringItem index="147" value="HIGHLIGHT LET"/>
+                <StringItem index="148" value="IMPACT"/>
+                <StringItem index="149" value="JESTER"/>
+                <StringItem index="150" value="JOAN"/>
+                <StringItem index="151" value="JOHN HANDY LET"/>
+                <StringItem index="152" value="JOKERMAN LET"/>
+                <StringItem index="153" value="KELT"/>
+                <StringItem index="154" value="KIDS"/>
+                <StringItem index="155" value="KINO MT"/>
+                <StringItem index="156" value="LA BAMBA LET"/>
+                <StringItem index="157" value="LITHOGRAPH"/>
+                <StringItem index="158" value="LUCIDA CONSOLE"/>
+                <StringItem index="159" value="MAP SYMBOLS"/>
+                <StringItem index="160" value="MARLETT"/>
+                <StringItem index="161" value="MATTEROFFACT"/>
+                <StringItem index="162" value="MATISSE ITC"/>
+                <StringItem index="163" value="MATURA MT"/>
+                <StringItem index="164" value="MEKANIK LET"/>
+                <StringItem index="165" value="MONACO"/>
+                <StringItem index="166" value="MONOSPACE"/>
+                <StringItem index="167" value="MONOTYPE SORTS"/>
+                <StringItem index="168" value="MS LINEDRAW"/>
+                <StringItem index="169" value="NEW YORK"/>
+                <StringItem index="170" value="OLDDREADFULNO7 BT"/>
+                <StringItem index="171" value="ORANGE LET"/>
+                <StringItem index="172" value="PALATINO"/>
+                <StringItem index="173" value="PLAYBILL"/>
+                <StringItem index="174" value="PUMP DEMI BOLD LET"/>
+                <StringItem index="175" value="PUPPYLIKE"/>
+                <StringItem index="176" value="ROLAND"/>
+                <StringItem index="177" value="SANS-SERIF"/>
+                <StringItem index="178" value="SCRIPTS"/>
+                <StringItem index="179" value="SCRUFF LET"/>
+                <StringItem index="180" value="SERIF"/>
+                <StringItem index="181" value="SHORT HAND"/>
+                <StringItem index="182" value="SIGNS NORMAL"/>
+                <StringItem index="183" value="SIMPLEX"/>
+                <StringItem index="184" value="SIMPSON"/>
+                <StringItem index="185" value="STYLUS BT"/>
+                <StringItem index="186" value="SUPERFRENCH"/>
+                <StringItem index="187" value="SURFER"/>
+                <StringItem index="188" value="SWIS721 BT"/>
+                <StringItem index="189" value="SWIS721 BLKOUL BT"/>
+                <StringItem index="190" value="SYMAP"/>
+                <StringItem index="191" value="SYMBOL"/>
+                <StringItem index="192" value="TAHOMA"/>
+                <StringItem index="193" value="TECHNIC"/>
+                <StringItem index="194" value="TEMPUS SANS ITC"/>
+                <StringItem index="195" value="TERK"/>
+                <StringItem index="196" value="TIMES"/>
+                <StringItem index="197" value="TIMES NEW ROMAN"/>
+                <StringItem index="198" value="TREBUCHET MS"/>
+                <StringItem index="199" value="TRENDY"/>
+                <StringItem index="200" value="TXT"/>
+                <StringItem index="201" value="VERDANA"/>
+                <StringItem index="202" value="VICTORIAN LET"/>
+                <StringItem index="203" value="VINETA BT"/>
+                <StringItem index="204" value="VIVIAN"/>
+                <StringItem index="205" value="WEBDINGS"/>
+                <StringItem index="206" value="WINGDINGS"/>
+                <StringItem index="207" value="WESTERN"/>
+                <StringItem index="208" value="WESTMINSTER"/>
+                <StringItem index="209" value="WESTWOOD LET"/>
+                <StringItem index="210" value="WIDE LATIN"/>
+                <StringItem index="211" value="ZAPFELLIPT BT"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Size:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSlider" name="jSliderFontSize">
+          <Properties>
+            <Property name="majorTickSpacing" type="int" value="6"/>
+            <Property name="maximum" type="int" value="32"/>
+            <Property name="minimum" type="int" value="6"/>
+            <Property name="minorTickSpacing" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnOK">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOKActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCancel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenuBold">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JCheckBoxMenuItem" name="popUpBold">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bold"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="selected" source="jCheckBoxMenuItemBold" sourcePath="${selected}" target="popUpBold" targetPath="selected" updateStrategy="0" immediately="false"/>
+          </BindingProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popUpBoldActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JCheckBoxMenuItem" name="popUpItalic">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Italic"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="selected" source="jCheckBoxMenuItemItalic" sourcePath="${selected}" target="popUpItalic" targetPath="selected" updateStrategy="0" immediately="false"/>
+          </BindingProperties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popUpItalicActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemOpen">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+O"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Open"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemOpenActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemClose">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Close"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemCloseActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuFormat">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Format"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuFormatActionPerformed"/>
+          </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItemBold">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bold"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMenuItemBoldActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jCheckBoxMenuItemItalic">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Italic"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxMenuItemItalicActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator2">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemSetcolor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Set color"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemSetcolorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemSetbackcolor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Set back color"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemSetbackcolorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemFont">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Font"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemFontActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuInfo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Info"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAbout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="About"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemAboutActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane1" alignment="0" pref="400" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane1" alignment="0" pref="279" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextAreaMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
