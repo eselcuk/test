@@ -10,7 +10,6 @@ import be.vdab.personeel.Bediende;
 import be.vdab.personeel.Werknemer;
 import be.vdab.personeel.kader.Kaderlid;
 import be.vdab.util.DatumException;
-import be.vdab.util.WerknemerException;
 import be.vdab.util.WerknemersDatum;
 import java.io.FileOutputStream;
 import java.io.IOException;
