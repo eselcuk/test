@@ -31,12 +31,12 @@ public class Datum implements IDatum, Comparable<Datum>, Serializable {
          throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
          }*/
         if (!valideerDatum(dag, maand, jaar)) {
-            throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+            //throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+        } else {
+            setDag(dag);
+            setMaand(maand);
+            setJaar(jaar);
         }
-        setDag(dag);
-        setMaand(maand);
-        setJaar(jaar);
-        //valideerDatum();
     }
 
     private boolean valideerDatum(int dag, int maand, int jaar) {
@@ -56,7 +56,10 @@ public class Datum implements IDatum, Comparable<Datum>, Serializable {
                 }
                 break;
             case 2:
-                if (dag < 1 && (!isLeepYear(jaar) && dag > 28)) {
+                if (dag < 1 || dag > 29) {
+                    return false;
+                }
+                if (dag == 29 && !isLeepYear(jaar)) {
                     return false;
                 }
                 break;
@@ -86,9 +89,10 @@ public class Datum implements IDatum, Comparable<Datum>, Serializable {
     @Override
     public void setDag(int dag) throws DatumException {
         if (!valideerDatum(dag, maand, jaar)) {
-            throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+            //throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+        } else {
+            this.dag = dag;
         }
-        setDag(dag);
         //setMaand(maand);
         //setJaar(jaar);
     }
@@ -101,11 +105,11 @@ public class Datum implements IDatum, Comparable<Datum>, Serializable {
     @Override
     public void setMaand(int maand) throws DatumException {
         if (!valideerDatum(dag, maand, jaar)) {
-            throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+            //throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+        } else {
+            this.maand = maand;
         }
-        //setDag(dag);
-        setMaand(maand);
-        //setJaar(jaar);
+
     }
 
     @Override
@@ -116,21 +120,21 @@ public class Datum implements IDatum, Comparable<Datum>, Serializable {
     @Override
     public void setJaar(int jaar) throws DatumException {
         if (!valideerDatum(dag, maand, jaar)) {
-            throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+            //throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+        } else {
+            this.jaar = jaar;
         }
-        //setDag(dag);
-        //setMaand(maand);
-        setJaar(jaar);
     }
 
     @Override
     public void setDatum(int dag, int maand, int jaar) throws DatumException {
         if (!valideerDatum(dag, maand, jaar)) {
             throw new DatumException("Verkeerd datum", dag + "/" + maand + "/" + jaar);
+        } else {
+            setDag(dag);
+            setMaand(maand);
+            setJaar(jaar);
         }
-        setDag(dag);
-        setMaand(maand);
-        setJaar(jaar);
     }
 
     @Override
