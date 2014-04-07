@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/IESSADate.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/staff/Person.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/EmployeeRegisterMain.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/EmployeeDate.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/FileAndObjectOIStream.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/ESSADateException.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/ReadExcel.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/EmpHoursRecorderMain.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/staff/Employee.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/Test.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/ESSADate.java</file>
+        </group>
     </open-files>
 </project-private>

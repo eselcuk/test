@@ -1,24 +1,26 @@
-// Fig. 8.7: Date.java 
-// Date class declaration.
-package com.essa;
+// Fig. 8.7: ESSADate.java 
+// ESSADate class declaration.
+package com.essa.util;
 
-public class Date 
-{
-   private int month; // 1-12
+import java.io.Serializable;
+
+public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
+
+   private static final long serialVersionUID = 1L;
    private int day;   // 1-31 based on month
+   private int month; // 1-12
    private int year;  // any year
 
    // constructor: call checkMonth to confirm proper value for month; 
    // call checkDay to confirm proper value for day
-   public Date( int theMonth, int theDay, int theYear )
+   public ESSADate(int day, int month, int year)
    {
-      month = checkMonth( theMonth ); // validate month
-      year = theYear; // could validate year
-      day = checkDay( theDay ); // validate day
+      this.year = year; // could validate year
+      this.month = checkMonth( month ); // validate month
+      this.day = checkDay( day ); // validate day
 
-      System.out.printf( 
-         "Date object constructor for date %s\n", this );
-   } // end Date constructor
+      //System.out.printf("Date object constructor for date %s\n", this );
+   } // end ESSADate constructor
 
    // utility method to confirm proper month value
    private int checkMonth( int testMonth )
@@ -55,9 +57,49 @@ public class Date
    // return a String of the form month/day/year
    public String toString()
    { 
-      return String.format( "%d/%d/%d", month, day, year ); 
+      return String.format( "%d/%d/%d", day, month, year ); 
    } // end method toString
-} // end class Date
+
+    @Override
+    public void setDay(int day) throws ESSADateException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getDay() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setMonth(int month) throws ESSADateException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getMonth() throws ESSADateException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setYear(int year) throws ESSADateException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getYear() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setDate(int day, int month, int year) throws ESSADateException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int compareTo(ESSADate o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+} // end class ESSADate
 
 
 /**************************************************************************

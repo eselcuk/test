@@ -1,2 +1,0 @@
-com.essatest.EmployeeHoursEntryTableGUI
-com.essatest.HoursEntryTableModel

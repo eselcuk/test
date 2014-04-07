@@ -3,58 +3,47 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.essa;
+package com.essa.util;
 
+import com.essa.staff.Employee;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.math.BigDecimal;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class FileAndObjectOIStreamClass {
+public class FileAndObjectOIStream {
 
-    /*public FileAndObjectOIStreamClass(Object object){
+    public FileAndObjectOIStream(Object object){
         
-    }*/
-    public static void main(String[] args) throws ParseException {
+    }
+   /* public static void main(String[] args) throws ParseException {
         //fileAndObjectOIStreamClass.fileObjectInput();
         SortedSet employees = new TreeSet();
-        employees.add(new Employee("74041446127", "Ekber", "Selcuk", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446127", "Ekber", "Selcuk", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "CFC BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446125", "Selcuk", "Ekber", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446124", "Dirx", "Belig", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446125", "Dirx", "Belig", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
+  
+        fileObjectOutput(employees, "employees.ser");
+        fileObjectInput("employees.ser");
+    }*/
 
-        fileObjectOutput(employees);
-        fileObjectInput();
-    }
-
-    public static void fileObjectOutput(Set set) {
+    public static void fileObjectOutput(Set set, String fileName) {
         FileOutputStream file = null;
         ObjectOutputStream obj = null;
         try {
-            file = new FileOutputStream("employees.ser");
+            file = new FileOutputStream(fileName);
             obj = new ObjectOutputStream(file);
 
-            System.out.println("test 1");
+            //System.out.println("test 1");
             //obj.writeObject(employees);
             obj.writeObject(set);
-            System.out.println("test 2");
+            //System.out.println("test 2");
             /*  other methods:
              *   write(int), write(byte[]), write(byte[],int,int)
              *   writeBoolean(boolean), writeShort(short)
@@ -76,14 +65,14 @@ public class FileAndObjectOIStreamClass {
         }
     }
 
-    public static void fileObjectInput() {
+    public static void fileObjectInput(String fileName) {
         FileInputStream file = null;
         ObjectInputStream obj = null;
         try {
             //een nieuwe fileInputstream en objectInputstream maken 
-            file = new FileInputStream("employees.ser");
+            file = new FileInputStream(fileName);
             obj = new ObjectInputStream(file);
-            System.out.println("test 3");
+            //System.out.println("test 3");
             Set set = (TreeSet) obj.readObject();
 
             Employee[] employees = new Employee[set.size()];
@@ -102,7 +91,7 @@ public class FileAndObjectOIStreamClass {
             }
             print(employees);
 
-            System.out.println("test 4");
+            //System.out.println("test 4");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {

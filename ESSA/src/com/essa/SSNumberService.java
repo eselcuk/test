@@ -6,6 +6,7 @@
 
 package com.essa;
 
+import com.essa.util.SSNumber;
 import java.io.Console;
 
 public class SSNumberService {

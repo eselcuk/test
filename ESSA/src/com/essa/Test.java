@@ -5,6 +5,9 @@
  */
 package com.essa;
 
+import com.essa.util.FileAndObjectOIStream;
+import com.essa.staff.Employee;
+import com.essa.util.ESSADate;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.SortedSet;
@@ -16,25 +19,26 @@ import java.util.TreeSet;
  */
 public class Test {
 
-    private static FileAndObjectOIStreamClass fileAndObjectOIStreamClass;
+    private static FileAndObjectOIStream fileAndObjectOIStreamClass;
 
     public static void main(String[] args) throws ParseException {
         //fileAndObjectOIStreamClass.fileObjectInput();
         SortedSet employees = new TreeSet();
-        employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        String fileName = "employee.ser";
+        employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", new ESSADate(11, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "CFC BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446125", "Selcuk", "Ekber", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446126", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446124", "Dirx", "Belig", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446125", "Dirx", "Belig", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446124", "Dirx", "Belig", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
+                BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
+        employees.add(new Employee("74041446125", "Dirx", "Belig", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
 
-        fileAndObjectOIStreamClass.fileObjectOutput(employees);
+        fileAndObjectOIStreamClass.fileObjectOutput(employees, fileName );
         //fileObjectOutput(employees);
-        //fileObjectInput();
+        fileAndObjectOIStreamClass.fileObjectInput(fileName);
        //fileAndObjectOIStreamClass.fileObjectInput();
 
     }

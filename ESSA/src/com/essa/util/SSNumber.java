@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.essa;
+package com.essa.util;
 
 import java.io.Serializable;
 

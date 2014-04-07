@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.essa;
+package com.essa.staff;
 
-import java.io.Serializable;
+import com.essa.Company;
+import com.essa.EmployeeContractType;
+import com.essa.util.ESSADate;
 import java.math.BigDecimal;
 import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  *
@@ -24,7 +24,7 @@ public class Employee extends Person {
     private float displacement;
 
     public Employee(String sSNumber, String firstName, String lastName, String gender,
-            String birthDate, String birthPlace, String address, long postcodeCode,
+            ESSADate birthDate, String birthPlace, String address, long postcodeCode,
             BigDecimal salary, EmployeeContractType empContractType,
             Company empWorksAt, float displacement) throws ParseException {
         super(sSNumber, firstName, lastName, gender, birthDate, birthPlace, address, postcodeCode);

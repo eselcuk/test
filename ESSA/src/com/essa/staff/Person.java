@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.essa;
+package com.essa.staff;
 
+import com.essa.util.ESSADate;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
-import java.util.Date;
+
 
 /**
  *
@@ -23,18 +24,17 @@ public class Person implements Comparable<Person>, Serializable {
     private String firstName;
     private String lastName;
     private String gender;
-    private Date birthDate;
+    private ESSADate birthDate;
     private String birthPlace;
     private String address;
     private long postcodeCode;
     
-    public Person(String sSNumber, String firstName, String lastName, String gender, String birthDate, String birthPlace, String address, long postcodeCode) throws ParseException {
+    public Person(String sSNumber, String firstName, String lastName, String gender, ESSADate birthDate, String birthPlace, String address, long postcodeCode) throws ParseException {
         setSSNumber(sSNumber);
         setFirstName(firstName);
         setLastName(lastName);
         setGender(gender);
-        setBirthDate(new SimpleDateFormat("dd/MM/yyyy").parse(birthDate));
-        //setBirthDate(new SimpleDateFormat("dd/mm/yyyy").parse(birthDate));
+        setBirthDate(birthDate);
         setBirthPlace(birthPlace);
         setAddress(address);
         setPostcodeCode(postcodeCode);
@@ -72,11 +72,11 @@ public class Person implements Comparable<Person>, Serializable {
         this.gender = gender;
     }
 
-    public Date getBirthDate() {       
+    public ESSADate getBirthDate() {       
         return birthDate;
     }
 
-    public final void setBirthDate(Date birthDate) {
+    public final void setBirthDate(ESSADate birthDate) {
         this.birthDate = birthDate;
     }
 

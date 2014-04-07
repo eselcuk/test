@@ -5,9 +5,10 @@
  */
 package com.essa;
 
+import com.essa.staff.Employee;
+import com.essa.util.ESSADate;
 import java.math.BigDecimal;
 import java.text.ParseException;
-import java.util.GregorianCalendar;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -22,7 +23,7 @@ public class EmployeeRegisterMain {
      */
     public static void main(String[] args) throws ParseException {
         SortedSet employees = new TreeSet();
-        employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", "14/04/1974", "Istanbul", "Hermesdijkstraat 17", 1,
+        employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", new ESSADate(14, 04, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
                 BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC","Compact BVBA","Weg naar As 264",1), 100F));
     }
 
