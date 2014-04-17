@@ -5,7 +5,7 @@
  */
 package com.essa.staff;
 
-import com.essa.Company;
+import com.essa.client.Company;
 import com.essa.EmployeeContractType;
 import com.essa.util.ESSADate;
 import java.math.BigDecimal;
