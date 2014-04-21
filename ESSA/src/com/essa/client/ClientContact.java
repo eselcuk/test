@@ -3,27 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.essa.client;
+
+import com.essa.staff.Person;
+import java.io.Serializable;
+import java.util.Comparator;
 
 /**
  *
  * @author CFC
  */
-public class ClientContact {
+public class ClientContact implements Comparable<ClientContact>, Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String firstName;
     private String lastName;
-    private String gender;
+    private String title;
     private String function;
     private String email;
     private String telephoneNumber;
     private String mobileNumber;
     private String faxNumber;
 
-    public ClientContact(String firstName, String lastName, String gender, String function, String email, String telephoneNumber, String mobileNumber, String faxNumber) {
+    public ClientContact(String firstName, String lastName, String title, String function, String email, String telephoneNumber, String mobileNumber, String faxNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.gender = gender;
+        this.title = title;
         this.function = function;
         this.email = email;
         this.telephoneNumber = telephoneNumber;
@@ -47,12 +52,12 @@ public class ClientContact {
         this.lastName = lastName;
     }
 
-    public String getGender() {
-        return gender;
+    public String getTitle() {
+        return title;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getFunction() {
@@ -95,4 +100,60 @@ public class ClientContact {
         this.faxNumber = faxNumber;
     }
 
+    @Override
+    public String toString() {
+        return getTitle() + "\t" + getFirstName() + "\t" + getLastName() + "\t"
+                + getFunction() + "\t" + getMobileNumber() + "\t" + getEmail() + "\t"
+                + getTelephoneNumber() + "\t" + getFaxNumber();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof ClientContact)) {
+            return false;
+        }
+        final ClientContact cc = (ClientContact) o;
+        return (this.getLastName() + this.getFirstName()).equals(cc.getLastName() + cc.getFirstName());
+    }
+
+    @Override
+    public int compareTo(ClientContact cc) {
+        if (cc == null) {
+            throw new NullPointerException();
+        } else if (this.equals(cc)) {
+            return 0;
+        } else {
+            //return this.getSSNumber().compareTo(p.getSSNumber());
+            return (this.getLastName() + this.getFirstName()).compareTo(cc.getLastName() + cc.getFirstName());
+        }
+    }
+
+    // inner class for ordering based on SSnumber
+   /* public static Comparator<Person> getSSNumberComparator() {
+     return new Comparator<Person>() {
+     @Override
+     public int compare(Person p1, Person p2) {
+     if (!(p1.equals(p2))) {
+     return p1.getSSNumber().compareTo(p2.getSSNumber());
+                    
+     } else {
+     return 0;
+     }
+     }
+     };
+     }
+     */
+    // inner class for ordering based on Aankoopprijs
+    public static Comparator<ClientContact> getFirstNameComparator() {
+        return new Comparator<ClientContact>() {
+            @Override
+            public int compare(ClientContact p1, ClientContact p2) {
+                if (!(p1.equals(p2))) {
+                    return p1.getFirstName().compareTo(p2.getFirstName());
+                } else {
+                    return 0;
+                }
+            }
+        };
+    }
 }

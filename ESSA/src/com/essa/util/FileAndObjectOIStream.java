@@ -5,7 +5,6 @@
  */
 package com.essa.util;
 
-import com.essa.staff.Employee;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -74,22 +73,30 @@ public class FileAndObjectOIStream {
             obj = new ObjectInputStream(file);
             //System.out.println("test 3");
             Set set = (TreeSet) obj.readObject();
-
-            Employee[] employees = new Employee[set.size()];
+            
+            Object[] objects = new Object[set.size()];;
+            //Employee[] employees = new Employee[set.size()];
+            //Client[] clients = new Client[set.size()];
             //System.out.println("set size: " + set.size());
 
-            int index = 0;
+            int i = 0;
             for (Iterator it = set.iterator(); it.hasNext();) {
                 Object o = it.next();
-                if (o instanceof Employee) {
-                    employees[index] = (Employee) o;
-                } else {
+                /*if (o instanceof Employee) {
+                    objects[index] = (Employee) o;
+                } else
+                if (o instanceof Client) {
+                    objects[index] = (Client) o;
                     //throw new UnsupportedDataTypeException();
-                }
-                index++;
+                }*/
+                objects[i++] = (Object) o;
+                
+               // index++;
 
             }
-            print(employees);
+            print(objects);
+            //print(o);
+
 
             //System.out.println("test 4");
         } catch (Exception ex) {
@@ -121,9 +128,9 @@ public class FileAndObjectOIStream {
      }
      */
 
-    private static void print(Employee[] employees) {
+    private static void print(Object[] objects) {
         //System.out.println();
-        for (Object object : employees) {
+        for (Object object : objects) {
             System.out.println(object);
         }
     }

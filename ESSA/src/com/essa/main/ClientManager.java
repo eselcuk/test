@@ -7,6 +7,8 @@ package com.essa.main;
 
 import com.essa.client.Company;
 import com.essa.EmployeeContractType;
+import com.essa.client.Client;
+import com.essa.client.ClientContact;
 import com.essa.util.FileAndObjectOIStream;
 import com.essa.staff.Employee;
 import com.essa.util.ESSADate;
@@ -27,12 +29,13 @@ public class ClientManager {
 
     public static void main(String[] args) throws ParseException {
         //fileAndObjectOIStreamClass.fileObjectInput();
-        SortedSet<Employee> employees = new TreeSet<>();
+        SortedSet<Client> clients = new TreeSet<>();
         fileName = "client.ser";
-        addEmployee(employees);
+        addClient(clients);
         //updateEmployee();
         //deleteEmployee();
-        listEmployee();
+        
+        listClient();
 
         //fileAndObjectOIStreamClass.fileObjectOutput(employees, fileName );
         //fileObjectOutput(employees);
@@ -40,22 +43,20 @@ public class ClientManager {
         //fileAndObjectOIStreamClass.fileObjectInput();
     }
 
-    private static void addEmployee(Set<Employee> employees) throws ParseException {
-        employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", new ESSADate(11, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "CFC BVBA", "Weg naar As 264", 1, "BE"), 100F));
-        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1, "BE"), 100F));
-        employees.add(new Employee("74041446126", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1, "BE"), 100F));
-        employees.add(new Employee("74041446124", "Dirx", "Belig", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1, "BE"), 100F));
-        employees.add(new Employee("74041446125", "Dirx", "Belig", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1, "BE"), 100F));
+    private static void addClient(Set<Client> clients) throws ParseException {
+        clients.add(new Client("CFC", "CFC bvba", new ClientContact("Salman", "Selcuk", "Dhr", "zaakvoerder", "info@cfc-bvba.com", "089246473", "0484943003", "089246474"), "Hermesdijkstraat 17", 1, "Bel"));
+        clients.add(new Client("Jacijs", "Jac Ijs NV", new ClientContact("Beny", "Wijvers", "Dhr", "Production Manager", "info@jacijs.com", "03xxxxxx", "0484xxxxxx", "02xxxxxx"), "H............ 17", 2, "Bel"));
+        clients.add(new Client("Mora", "Mora NV   ", new ClientContact("Gerard", "Xman", "Dhr", "Production Manager", "info@mora.com", "+31xxxxxxxx", "+31xxxxxx", "+31xxxxxx"), "Fleter......... 17", 3, "NL"));
+        clients.add(new Client("Glacio", "Glacio NV", new ClientContact("Yman", "Znaam", "Mvrouw", "Secreterasse", "info@glacio.com", "", "", "089246474"), "?............... 17", 4, "Bel"));
+        //System.out.println("test 1");
+        fileAndObjectOIStreamClass.fileObjectOutput(clients, fileName);
+        //System.out.println("test 2");
 
-        fileAndObjectOIStreamClass.fileObjectOutput(employees, fileName);
     }
 
-    private static void listEmployee() {
+    private static void listClient() {
+        //System.out.println("test 3");
         fileAndObjectOIStreamClass.fileObjectInput(fileName);
+        //System.out.println("test 4");
     }
 }
