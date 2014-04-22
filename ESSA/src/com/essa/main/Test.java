@@ -24,7 +24,6 @@ public class Test {
     private static FileAndObjectOIStream fileAndObjectOIStreamClass;
 
     public static void main(String[] args) throws ParseException {
-        //fileAndObjectOIStreamClass.fileObjectInput();
         SortedSet employees = new TreeSet();
         String fileName = "employee.ser";
         employees.add(new Employee("74041446122", "Ekber", "Selcuk", "Male", new ESSADate(11, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
