@@ -86,7 +86,7 @@ public class FileAndObjectOIStream {
                 }*/
                 objects[i++] = (Object) o;
             }
-            //print(objects);
+            print(objects);
             //print(o);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

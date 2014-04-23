@@ -2,22 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/staff/Person.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/util/EmailAddressValidator.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/EmployeeRegisterMain.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/client/Client.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/ReadExcel.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/client/Company.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/SSNumberService.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/ClientManager.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/EmployeeManager.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/util/ESSADate.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/EmpHoursRecorderMain.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/client/ClientContact.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/main/Test.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/util/IESSADate.java</file>
-            <file>file:/C:/_myprojects/JPFProjecten/ESSA/src/com/essa/staff/Employee.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

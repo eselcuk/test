@@ -28,6 +28,7 @@ public class EmployeeHoursManager {
         SortedSet<TimeTrack> timeTracks = new TreeSet<>();
         fileName = "timetrack.ser";
         addTimeTrack(timeTracks);
+        listTimeTrack();
 
         //timeTracking.setEmployeeID(null);
         //timeTracking.setEmployeeName(null);
@@ -51,12 +52,16 @@ public class EmployeeHoursManager {
         try {
             System.err.println("test");
             timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), new Time(00, 30, 00), new Time(2, 30, 00), 100F, "OK"));
+            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), new Time(00, 30, 00), new Time(2, 30, 00), 100F, "OK"));
+            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio2", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), new Time(00, 30, 00), new Time(2, 30, 00), 100F, "OK"));
+            timeTracks.add(new TimeTrack("74041446122", "Selcuk2", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), new Time(00, 30, 00), new Time(2, 30, 00), 100F, "OK"));
+            timeTracks.add(new TimeTrack("740414461223", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), new Time(00, 30, 00), new Time(2, 30, 00), 100F, "OK"));
             System.err.println("test 1");
             fileAndObjectOIStream.fileObjectOutput(timeTracks, fileName);
-            System.out.println("test 2");
+            System.err.println("test 2");
 
         } catch (Exception e) {
-            e.getMessage();
+            System.err.println(e.getMessage());
         }
 
     }
@@ -64,6 +69,7 @@ public class EmployeeHoursManager {
     private static void listTimeTrack() {
         System.out.println("test 3");
         fileAndObjectOIStream.fileObjectInput(fileName);
+
         System.out.println("test 4");
     }
 }
