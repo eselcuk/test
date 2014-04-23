@@ -7,7 +7,7 @@ package com.essa.staff;
 
 import com.essa.client.Company;
 import com.essa.EmployeeContractType;
-import com.essa.util.ESSADate;
+import com.essa.util.Date;
 import java.math.BigDecimal;
 import java.text.ParseException;
 
@@ -24,7 +24,7 @@ public class Employee extends Person {
     private float displacement;
 
     public Employee(String sSNumber, String firstName, String lastName, String gender,
-            ESSADate birthDate, String birthPlace, String address, long postcodeCode,
+            Date birthDate, String birthPlace, String address, long postcodeCode,
             BigDecimal salary, EmployeeContractType empContractType,
             Company empWorksAt, float displacement) throws ParseException {
         super(sSNumber, firstName, lastName, gender, birthDate, birthPlace, address, postcodeCode);

@@ -5,7 +5,7 @@
  */
 package com.essa.staff;
 
-import com.essa.util.ESSADate;
+import com.essa.util.Date;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,12 +24,12 @@ public class Person implements Comparable<Person>, Serializable {
     private String firstName;
     private String lastName;
     private String gender;
-    private ESSADate birthDate;
+    private Date birthDate;
     private String birthPlace;
     private String address;
     private long postcodeCode;
     
-    public Person(String sSNumber, String firstName, String lastName, String gender, ESSADate birthDate, String birthPlace, String address, long postcodeCode) throws ParseException {
+    public Person(String sSNumber, String firstName, String lastName, String gender, Date birthDate, String birthPlace, String address, long postcodeCode) throws ParseException {
         setSSNumber(sSNumber);
         setFirstName(firstName);
         setLastName(lastName);
@@ -72,11 +72,11 @@ public class Person implements Comparable<Person>, Serializable {
         this.gender = gender;
     }
 
-    public ESSADate getBirthDate() {       
+    public Date getBirthDate() {       
         return birthDate;
     }
 
-    public final void setBirthDate(ESSADate birthDate) {
+    public final void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 

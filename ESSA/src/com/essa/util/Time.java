@@ -1,6 +1,6 @@
-// Fig. H.1: ESSATime.java
-// ESSATime class declaration with set and get methods.
-//package com.deitel.jhtp6.appenH; // place ESSATime in a package
+// Fig. H.1: Time.java
+// Time class declaration with set and get methods.
+//package com.deitel.jhtp6.appenH; // place Time in a package
 package com.essa.util;
 
 /**
@@ -8,7 +8,7 @@ package com.essa.util;
  * @see java.lang.Object
  * @author Deitel & Associates, Inc.
  */
-public class ESSATime
+public class Time
 {
    private int hour;   // 0 - 23
    private int minute; // 0 - 59
@@ -19,20 +19,20 @@ public class ESSATime
     * to zero. This ensures that Time objects start in a consistent 
     * state. @throws Exception In the case of an invalid time
     */
-   public ESSATime() throws Exception
+   public Time() throws Exception
    {
-      this( 0, 0, 0 ); // invoke ESSATime constructor with three arguments
-   } // end no-argument ESSATime constructor
+      this( 0, 0, 0 ); // invoke Time constructor with three arguments
+   } // end no-argument Time constructor
 
    /** 
     * Time constructor
     * @param h the hour
     * @throws Exception In the case of an invalid time
     */
-   public ESSATime( int h ) throws Exception
+   public Time( int h ) throws Exception
    { 
-      this( h, 0, 0 ); // invoke ESSATime constructor with three arguments
-   } // end one-argument ESSATime constructor
+      this( h, 0, 0 ); // invoke Time constructor with three arguments
+   } // end one-argument Time constructor
 
    /** 
     * Time constructor
@@ -40,10 +40,10 @@ public class ESSATime
     * @param m the minute
     * @throws Exception In the case of an invalid time
     */
-   public ESSATime( int h, int m ) throws Exception
+   public Time( int h, int m ) throws Exception
    { 
-      this( h, m, 0 ); // invoke ESSATime constructor with three arguments
-   } // end two-argument ESSATime constructor 
+      this( h, m, 0 ); // invoke Time constructor with three arguments
+   } // end two-argument Time constructor 
 
    /** 
     * Time constructor
@@ -52,21 +52,21 @@ public class ESSATime
     * @param s the second
     * @throws Exception In the case of an invalid time
     */
-   public ESSATime( int h, int m, int s ) throws Exception
+   public Time( int h, int m, int s ) throws Exception
    { 
       setTime( h, m, s ); // invoke setTime to validate time
-   } // end three-argument ESSATime constructor 
+   } // end three-argument Time constructor 
 
    /** 
     *  Time constructor
     *  @param time A Time object with which to initialize
     *  @throws Exception In the case of an invalid time
     */
-   public ESSATime( ESSATime time ) throws Exception
+   public Time( Time time ) throws Exception
    {
-      // invoke ESSATime constructor with three arguments
+      // invoke Time constructor with three arguments
       this( time.getHour(), time.getMinute(), time.getSecond() );
-   } // end ESSATime constructor with ESSATime argument
+   } // end Time constructor with Time argument
 
    /**
     *  Set a new time value using universal time. Perform 
@@ -174,7 +174,7 @@ public class ESSATime
          ( ( getHour() == 0 || getHour() == 12 ) ? 12 : getHour() % 12 ),
          getMinute(), getSecond(), ( getHour() < 12 ? "AM" : "PM" ) );
    } // end method toStandardString
-} // end class ESSATime
+} // end class Time
 
 /**************************************************************************
  * (C) Copyright 1992-2005 by Deitel & Associates, Inc. and               *

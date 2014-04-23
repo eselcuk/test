@@ -5,6 +5,8 @@
  */
 package com.essa.util;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,27 +22,16 @@ public class FileAndObjectOIStream {
     public FileAndObjectOIStream(Object object){
         
     }
-   /* public static void main(String[] args) throws ParseException {
-        //fileAndObjectOIStreamClass.fileObjectInput();
-        SortedSet employees = new TreeSet();
-        employees.add(new Employee("74041446127", "Ekber", "Selcuk", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.SERVANT, new Company("CFC", "CFC BVBA", "Weg naar As 264", 1), 100F));
-        employees.add(new Employee("74041446123", "Selcuk", "Ekber", "Male", new ESSADate(14, 4, 1974), "Istanbul", "Hermesdijkstraat 17", 1,
-                BigDecimal.valueOf(20.00), EmployeeContractType.WORKER, new Company("CFC", "Compact BVBA", "Weg naar As 264", 1), 100F));
-  
-        fileObjectOutput(employees, "employees.ser");
-        fileObjectInput("employees.ser");
-    }*/
 
     public static void fileObjectOutput(Set set, String fileName) {
         FileOutputStream file = null;
+        BufferedOutputStream buf = null;
         ObjectOutputStream obj = null;
         try {
             file = new FileOutputStream(fileName);
-            obj = new ObjectOutputStream(file);
+            buf = new BufferedOutputStream(file);
+            obj = new ObjectOutputStream(buf);
 
-            //System.out.println("test 1");
-            //obj.writeObject(employees);
             obj.writeObject(set);
             //System.out.println("test 2");
             /*  other methods:
@@ -56,6 +47,7 @@ public class FileAndObjectOIStream {
             if (obj != null) {
                 try {
                     //outputstream sluiten 
+                    buf.close();
                     obj.close();
                 } catch (IOException ex) {
                     System.out.println(ex.getMessage());
@@ -64,17 +56,20 @@ public class FileAndObjectOIStream {
         }
     }
 
-    public static void fileObjectInput(String fileName) {
+    public static Object[] fileObjectInput(String fileName) {
         FileInputStream file = null;
+        BufferedInputStream buf = null;
         ObjectInputStream obj = null;
+        Object[] objects = null;
         try {
             //een nieuwe fileInputstream en objectInputstream maken 
             file = new FileInputStream(fileName);
-            obj = new ObjectInputStream(file);
+            buf = new BufferedInputStream(file);
+            obj = new ObjectInputStream(buf);
             //System.out.println("test 3");
             Set set = (TreeSet) obj.readObject();
             
-            Object[] objects = new Object[set.size()];;
+            objects = new Object[set.size()];;
             //Employee[] employees = new Employee[set.size()];
             //Client[] clients = new Client[set.size()];
             //System.out.println("set size: " + set.size());
@@ -90,44 +85,25 @@ public class FileAndObjectOIStream {
                     //throw new UnsupportedDataTypeException();
                 }*/
                 objects[i++] = (Object) o;
-                
-               // index++;
-
             }
-            print(objects);
+            //print(objects);
             //print(o);
-
-
-            //System.out.println("test 4");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
             //de file sluiten 
             if (obj != null) {
                 try {
+                    file.close();
+                    buf.close();
                     obj.close();
                 } catch (IOException ex) {
                     System.out.println(ex.getMessage());
                 }
             }
+            return objects;
         }
     }
-    /*
-     private static void print(SortedSet voertuigen) {
-     //System.out.println();
-     for (Object object : voertuigen) {
-     System.out.println(object);
-     }
-     }
-
-     private static void print(Set voertuigen) {
-     //System.out.println();
-     for (Object object : voertuigen) {
-     System.out.println(object);
-     }
-     }
-     */
-
     private static void print(Object[] objects) {
         //System.out.println();
         for (Object object : objects) {

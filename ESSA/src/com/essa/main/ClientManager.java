@@ -11,7 +11,7 @@ import com.essa.client.Client;
 import com.essa.client.ClientContact;
 import com.essa.util.FileAndObjectOIStream;
 import com.essa.staff.Employee;
-import com.essa.util.ESSADate;
+import com.essa.util.Date;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Set;

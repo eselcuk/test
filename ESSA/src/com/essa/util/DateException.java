@@ -9,18 +9,18 @@ package com.essa.util;
  *
  * @author zi05
  */
-public class ESSADateException extends Exception {
+public class DateException extends Exception {
 
     private String invalidDate;
 
-    public ESSADateException() {
+    public DateException() {
     }
 
-    public ESSADateException(String message) {
+    public DateException(String message) {
         super(message);
     }
 
-    public ESSADateException(String msg,
+    public DateException(String msg,
             String date) {
         super(msg);
         this.invalidDate = date;

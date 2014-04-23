@@ -9,9 +9,9 @@ package com.essa.util;
  *
  * @author zi05
  */
-public class EmployeeDate extends ESSADate {
+public class EmployeeDate extends Date {
 
-    /*public EmployeeDate() throws ESSADateException {
+    /*public EmployeeDate() throws DateException {
         super.setDate(2, 12, 1977);
     }*/
 
@@ -26,13 +26,13 @@ public class EmployeeDate extends ESSADate {
             super.setMonth(month);
             super.setYear(year);
         } else {
-            throw new ESSADateException("enter a valid date", day + "/" + month + "/" + year);
+            throw new DateException("enter a valid date", day + "/" + month + "/" + year);
         }
     }
 */
-    private boolean validateDateInService(int day, int month, int year) throws ESSADateException {
+    private boolean validateDateInService(int day, int month, int year) throws DateException {
 
-        ESSADate dateInservice = new EmployeeDate(day, month, year);
+        Date dateInservice = new EmployeeDate(day, month, year);
         if ((dateInservice.getYear()> year)) {
             return false;
         } else if ((dateInservice.getYear() < year)) {

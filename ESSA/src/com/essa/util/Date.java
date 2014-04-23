@@ -1,10 +1,10 @@
-// Fig. 8.7: ESSADate.java 
-// ESSADate class declaration.
+// Fig. 8.7: Date.java 
+// Date class declaration.
 package com.essa.util;
 
 import java.io.Serializable;
 
-public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
+public class Date implements IDate, Comparable<Date>, Serializable {
 
    private static final long serialVersionUID = 1L;
    private int day;   // 1-31 based on month
@@ -13,14 +13,14 @@ public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
 
    // constructor: call checkMonth to confirm proper value for month; 
    // call checkDay to confirm proper value for day
-   public ESSADate(int day, int month, int year)
+   public Date(int day, int month, int year)
    {
       this.year = year; // could validate year
       this.month = checkMonth( month ); // validate month
       this.day = checkDay( day ); // validate day
 
       //System.out.printf("Date object constructor for date %s\n", this );
-   } // end ESSADate constructor
+   } // end Date constructor
 
    // utility method to confirm proper month value
    private int checkMonth( int testMonth )
@@ -61,7 +61,7 @@ public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
    } // end method toString
 
     @Override
-    public void setDay(int day) throws ESSADateException {
+    public void setDay(int day) throws DateException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -71,17 +71,17 @@ public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
     }
 
     @Override
-    public void setMonth(int month) throws ESSADateException {
+    public void setMonth(int month) throws DateException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int getMonth() throws ESSADateException {
+    public int getMonth() throws DateException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void setYear(int year) throws ESSADateException {
+    public void setYear(int year) throws DateException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -91,15 +91,15 @@ public class ESSADate implements IESSADate, Comparable<ESSADate>, Serializable {
     }
 
     @Override
-    public void setDate(int day, int month, int year) throws ESSADateException {
+    public void setDate(int day, int month, int year) throws DateException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int compareTo(ESSADate o) {
+    public int compareTo(Date o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-} // end class ESSADate
+} // end class Date
 
 
 /**************************************************************************
