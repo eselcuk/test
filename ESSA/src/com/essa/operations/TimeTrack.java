@@ -26,12 +26,12 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
     private Date endDate;
     private Time startTime;
     private Time endTime;
-    private Time breakInMinutes;
-    private Time breakStartsAt;
+    private int breakTotal; // in minutes
+    private int breakPeriod;// 1 = between 6:00-22:00, 2 = between 22:00-06:00, 3 = equally distributed
     private float employeeDisplacement;
     private String description;
 
-    public TimeTrack(String employeeID, String employeeName, String client, Date startDate, Date endDate, Time startTime, Time endTime, Time breakInMinutes, Time breakStartsAt, float employeeDisplacement, String description) {
+    public TimeTrack(String employeeID, String employeeName, String client, Date startDate, Date endDate, Time startTime, Time endTime, int breakTotal, int breakPeriod, float employeeDisplacement, String description) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.client = client;
@@ -39,8 +39,8 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
         this.endDate = endDate;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.breakInMinutes = breakInMinutes;
-        this.breakStartsAt = breakStartsAt;
+        this.breakTotal = breakTotal;
+        this.breakPeriod = breakPeriod;
         this.employeeDisplacement = employeeDisplacement;
         this.description = description;
     }
@@ -88,23 +88,21 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
     public void setEndTime(Time endTime) {
         this.endTime = endTime;
     }
-
-    public Time getBreakInMinutes() {
-        return breakInMinutes;
+  public int getBreakTotal() {
+        return breakTotal;
     }
 
-    public void setBreakInMinutes(Time breakInMinutes) {
-        this.breakInMinutes = breakInMinutes;
+    public void setBreakTotal(int breakTotal) {
+        this.breakTotal = breakTotal;
     }
 
-    public Time getBreakStartsAt() {
-        return breakStartsAt;
+    public int getBreakPeriod() {
+        return breakPeriod;
     }
 
-    public void setBreakStartsAt(Time breakStartsAt) {
-        this.breakStartsAt = breakStartsAt;
+    public void setBreakPeriod(int breakPeriod) {
+        this.breakPeriod = breakPeriod;
     }
-
     public float getEmployeeDisplacement() {
         return employeeDisplacement;
     }
@@ -142,7 +140,7 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
         return getEmployeeID() + "\t" + getEmployeeName() + "\t" + getClient()
                 + "\t" + getStartDate() + "\t" + getEndDate() 
                 + "\t" + getStartTime().toUniversalString() + "\t" + getEndTime().toUniversalString() 
-                + "\t" + getBreakInMinutes().toUniversalString()+ "\t" + getBreakStartsAt().toUniversalString()
+                + "\t" + getBreakTotal() + "\t" + getBreakPeriod()
                 + "\t" + getEmployeeDisplacement() + "\t" + getDescription();
     }
 
@@ -152,8 +150,8 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
             return false;
         }
         final TimeTrack t = (TimeTrack) o;
-        //System.err.println((this.getStartDate() + this.getClient() + this.getEmployeeID() + this.getStartTime()).equals(t.getStartDate() + t.getClient() + t.getEmployeeID() + t.getStartTime()));
-        return (this.getStartDate() + this.getClient() + this.getEmployeeID() + this.getStartTime()).equals(t.getStartDate() + t.getClient() + t.getEmployeeID() + t.getStartTime());
+        //System.err.println(this.getEmployeeID()+ this.getClient() + this.getStartDate()+ this.getStartTime().toUniversalString());
+        return (this.getEmployeeID()+ this.getClient() + this.getStartDate()+ this.getStartTime().toUniversalString()).equals(t.getEmployeeID()+ t.getClient() + t.getStartDate()+ t.getStartTime().toUniversalString());
         //return (this.hashCode() == t.hashCode());
     }
 
@@ -168,8 +166,10 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
             throw new NullPointerException();
         } else if (this.equals(t)) {
             return 0;
-        } else {
-            return this.getStartDate().compareTo(t.getStartDate());
+        } 
+        else {
+            return 1;
+            //return this.compareTo(t);
         }
     }
 
@@ -199,5 +199,5 @@ public class TimeTrack implements Comparable<TimeTrack>, Serializable {
                 }
             }
         };
-    }
+    }  
 }
