@@ -81,6 +81,7 @@ public class EmployeeHoursManager {
             endTimeMinutes = timeTrack.getEndTime().getHour() * 60 + timeTrack.getEndTime().getMinute();
 
             if (startTimeMinutes != endTimeMinutes) {
+                //calculate start/end period btw 06:00-22:00 
                 if (startTimeMinutes >= morningShiftMinutes && startTimeMinutes <= nightShiftMinutes) {
                     if (startTimeMinutes < endTimeMinutes && endTimeMinutes <= nightShiftMinutes) { // worked and finished btw morning and night shifts
                         dayMinutesWorked = endTimeMinutes - startTimeMinutes; // total work as minutes
@@ -94,7 +95,8 @@ public class EmployeeHoursManager {
                         dayMinutesWorked = (nightShiftMinutes - morningShiftMinutes) - (startTimeMinutes - endTimeMinutes); // total work as minutes
                         nightMinutesWorked = (midNightMinutes + morningShiftMinutes) - nightShiftMinutes; // total work as minutes
                     }
-
+                
+                //calculate start/end period btw 22:00-24:00 
                 } else if (startTimeMinutes >= nightShiftMinutes && startTimeMinutes <= midNightMinutes) {
                     if (startTimeMinutes < endTimeMinutes && endTimeMinutes <= nightShiftMinutes) { // worked and finished btw 22:00-24:00
                         nightMinutesWorked = endTimeMinutes - startTimeMinutes; // total work as minutes
@@ -109,7 +111,7 @@ public class EmployeeHoursManager {
                         nightMinutesWorked = (midNightMinutes + nightShiftMinutes) - (startTimeMinutes - endTimeMinutes); // total work as minutes
                     }
                 
-                //calculate start/end period btw 24:00-24:00   
+                //calculate start/end period btw 24:00-06:00   
                 } else if (startTimeMinutes < nightShiftMinutes && startTimeMinutes <= morningShiftMinutes) {
                         
 
