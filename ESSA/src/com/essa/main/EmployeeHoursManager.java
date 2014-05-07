@@ -34,8 +34,8 @@ public class EmployeeHoursManager {
     private static void addTimeTrack(Set<TimeTrack> timeTracks) throws ParseException {
         try {
             System.err.println("test");
-            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio1", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), 30, 2, 100F, "OK"));
-            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), 30, 1, 100F, "OK"));
+            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio1", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 00, 00), new Time(5, 30, 00), 30, 2, 100F, "OK"));
+            timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(20, 30, 00), new Time(7, 30, 00), 30, 1, 100F, "OK"));
             timeTracks.add(new TimeTrack("74041446121", "Selcuk", "Glacio", new Date(24, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), 30, 2, 100F, "OK"));
             timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(23, 30, 00), new Time(22, 30, 00), 30, 3, 100F, "OK"));
             timeTracks.add(new TimeTrack("74041446122", "Selcuk", "Glacio", new Date(23, 4, 2014), new Date(24, 4, 2014), new Time(22, 30, 00), new Time(22, 30, 00), 30, 2, 100F, "OK"));
@@ -51,6 +51,9 @@ public class EmployeeHoursManager {
 
     private static void listTimeTrack() {
         System.out.println("test 3");
+        System.out.print("Employee id \tName \tClient \tStart date \tEnd date \t");
+        System.out.println("Start time \tEnd time \tBreak period \tDisp \tDescription");
+
         fileAndObjectOIStream.fileObjectInput(fileName);
 
         System.out.println("test 4");
@@ -72,9 +75,9 @@ public class EmployeeHoursManager {
          }*/
 
         //ESSATime diffInESSATime = null;
-        int dayMinutesWorked, nightMinutesWorked;
+        int dayMinutesWorked = 0, nightMinutesWorked = 0;
         int i = 0;
-        for (TimeTrack timeTrack : timeTracks) {
+        for (TimeTrack timeTrack : set) {
             //Time sTime = timeTrack.getStartTime();
             startTimeMinutes = timeTrack.getStartTime().getHour() * 60 + timeTrack.getStartTime().getMinute();
             //Time eTime = timeTrack.getEndTime();
@@ -95,8 +98,8 @@ public class EmployeeHoursManager {
                         dayMinutesWorked = (nightShiftMinutes - morningShiftMinutes) - (startTimeMinutes - endTimeMinutes); // total work as minutes
                         nightMinutesWorked = (midNightMinutes + morningShiftMinutes) - nightShiftMinutes; // total work as minutes
                     }
-                
-                //calculate start/end period btw 22:00-24:00 
+
+                    //calculate start/end period btw 22:00-24:00 
                 } else if (startTimeMinutes >= nightShiftMinutes && startTimeMinutes <= midNightMinutes) {
                     if (startTimeMinutes < endTimeMinutes && endTimeMinutes <= nightShiftMinutes) { // worked and finished btw 22:00-24:00
                         nightMinutesWorked = endTimeMinutes - startTimeMinutes; // total work as minutes
@@ -110,13 +113,20 @@ public class EmployeeHoursManager {
                         dayMinutesWorked = (nightShiftMinutes - morningShiftMinutes); // total work as minutes
                         nightMinutesWorked = (midNightMinutes + nightShiftMinutes) - (startTimeMinutes - endTimeMinutes); // total work as minutes
                     }
-                
-                //calculate start/end period btw 24:00-06:00   
-                } else if (startTimeMinutes < nightShiftMinutes && startTimeMinutes <= morningShiftMinutes) {
-                        
 
+                    //calculate start/end period btw 24:00-06:00   
+                } else if (startTimeMinutes < morningShiftMinutes && endTimeMinutes <= morningShiftMinutes) {
+                    nightMinutesWorked = endTimeMinutes - startTimeMinutes; // total work as minutes
                 }
             }
+
+            //calculate worked time in hours format
+            //new ESSATime(dayMinutesWorked/60, dayMinutesWorked%60);
+            //System.out.println(dayMinutesWorked/60 + " "+nightMinutesWorked%60);
+            Time workedTime1 = new  Time(dayMinutesWorked/60, dayMinutesWorked%60);
+            Time workedTime2 = new  Time(dayMinutesWorked/60, dayMinutesWorked%60);
+            System.out.println("in day:" + workedTime1.toUniversalString());
+            System.out.println("in night:" + workedTime2.toUniversalString());
         }
     }
 }

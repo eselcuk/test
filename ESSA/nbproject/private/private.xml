@@ -4,12 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/main/EmployeeManager.java</file>
-            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/staff/Person.java</file>
-            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/EmployeeDate.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/DateException.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/main/ClientManager.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/ESSATime.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/main/DateTimeTest.java</file>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/Date.java</file>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/operations/TimeTrack.java</file>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/FileAndObjectOIStream.java</file>
-            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/IDate.java</file>
+            <file>file:/C:/JPFProjecten/ESSA/src/com/essa/operations/EmployeeHoursNetto.java</file>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/main/EmployeeHoursManager.java</file>
             <file>file:/C:/JPFProjecten/ESSA/src/com/essa/util/Time.java</file>
         </group>
