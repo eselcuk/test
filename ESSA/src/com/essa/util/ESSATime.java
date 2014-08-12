@@ -70,7 +70,29 @@ public class ESSATime extends Time {
     public void setHoursAsMinute(int hoursAsMinute) {
         this.hoursAsMinute = hoursAsMinute;
     }
-
+   public int isBetween(Time time1, Time time2) {
+        if (time1 == null || time2 == null) {
+            throw new NullPointerException();
+        }
+        
+        long t1 = time1.getHour() * 60 + time1.getMinute() * 60 + time1.getSecond();
+        long t2 = this.getHour() * 60 + this.getMinute() * 60 + this.getSecond();
+        long t3 = time2.getHour() * 60 + time2.getMinute() * 60 + time2.getSecond();
+        
+        if (t1 < t3) {
+            if (t1 <= t2 && t2 <= t3) {
+                return 0;
+            }else if (t1 > t2 && t2 <= t3){
+            }
+       }
+        if (t1 > t2 ) {
+            return 1;
+        } else if (t1 < t2) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
     public ESSATime subtractHours(Time t1, Time t2) throws Exception {
         int diffAsMin = t2.getHour() * 60 + t2.getMinute() - t1.getHour() * 60 + t1.getMinute();
 

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* basis 1em = 16px
+4px = 0.25em
+6 = 0.375em
+8 = 0.5em
+10 = 0.625em
+12 = 0.75em
+14 = 0.875em
+18 = 1.125em
+20 = 1.25em
+22 = 1.375em
+24 = 1.5em
+32 = 2em
+100 = 6.25em;
+*/
+
+/* CSS Document voor deGazet */
+/* NORMALIZE */
+html, body, div, section, article, aside, nav {
+    margin:0;
+    padding:0;
+}
+img {
+    border:none;
+    float:left;
+    margin: 0 1.25em 0.5em 0;
+}
+table{
+    border-collapse:collapse;
+    border-spacing: 0;
+    empty-cells:hide;
+}
+tr,td {
+    margin:0;
+    padding:0;
+}
+header {
+    padding-top: 0.375em; /* 6px */
+}
+section, aside {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+article {
+    margin: 0 20px 0 0; /* gutter */
+    padding: 0.375em 0 1.25em; /* 6px 20px*/
+}
+article p {
+    margin: 0;
+    padding: 0 0 0.75em 0; /*12px*/
+}
+article h2 {
+    margin: 0.375em 0; /*6px*/
+}
+/****GRID****/
+.span1 {
+    width:196px;
+    float:left;
+}
+.span2 {
+    width:392px;
+    float:left;
+}
+.span3 {
+    width:588px;
+    float:left;
+}
+.span4 {
+    width:784px;
+    float:left;
+}
+.span5 {
+    width:980px;
+    float:left;
+}
+.span5>article {
+    margin-right:0; /* geen gutter in span5*/
+}
+.span5>h2 {
+    margin-right:0; /* geen gutter in span5*/
+}
